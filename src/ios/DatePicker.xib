@@ -86,13 +86,13 @@
                         <constraint firstItem="FEs-Wn-Ur2" firstAttribute="height" secondItem="xq4-6B-F5W" secondAttribute="height" id="0XS-oZ-CNe"/>
                         <constraint firstAttribute="height" constant="216" id="9uR-69-zFL"/>
                         <constraint firstItem="FEs-Wn-Ur2" firstAttribute="width" secondItem="xq4-6B-F5W" secondAttribute="width" id="Gl0-Ut-zPZ"/>
+                        <constraint firstItem="6Rg-v6-1z5" firstAttribute="centerX" secondItem="b2J-jW-BgT" secondAttribute="centerX" id="Lus-HF-HAK"/>
                         <constraint firstItem="CHZ-tf-She" firstAttribute="leading" secondItem="b2J-jW-BgT" secondAttribute="leading" id="NUO-OT-Yul"/>
                         <constraint firstItem="6Rg-v6-1z5" firstAttribute="height" secondItem="FEs-Wn-Ur2" secondAttribute="height" id="POP-Lr-91P"/>
                         <constraint firstAttribute="trailing" secondItem="CHZ-tf-She" secondAttribute="trailing" id="Pds-Eg-BO8"/>
                         <constraint firstAttribute="bottom" secondItem="CHZ-tf-She" secondAttribute="bottom" constant="-18" id="Pz2-m8-ZCU"/>
                         <constraint firstItem="6Rg-v6-1z5" firstAttribute="top" secondItem="FEs-Wn-Ur2" secondAttribute="top" id="WL2-os-L34"/>
                         <constraint firstItem="xq4-6B-F5W" firstAttribute="top" secondItem="b2J-jW-BgT" secondAttribute="top" constant="8" id="bcc-2v-8aw"/>
-                        <constraint firstItem="FEs-Wn-Ur2" firstAttribute="leading" secondItem="6Rg-v6-1z5" secondAttribute="trailing" constant="10" id="ghz-sA-kle"/>
                         <constraint firstItem="6Rg-v6-1z5" firstAttribute="width" secondItem="FEs-Wn-Ur2" secondAttribute="width" id="giG-8u-DGf"/>
                         <constraint firstItem="xq4-6B-F5W" firstAttribute="top" secondItem="FEs-Wn-Ur2" secondAttribute="top" id="n2U-fL-D2y"/>
                         <constraint firstItem="CHZ-tf-She" firstAttribute="trailing" secondItem="FEs-Wn-Ur2" secondAttribute="trailing" id="uef-vO-KLf"/>
