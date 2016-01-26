@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *datePickerComponentsContainerVSpace;
 @property (nonatomic) IBOutlet UIView* datePickerComponentsContainer;
 @property (nonatomic) IBOutlet UIButton *cancelButton;
+@property (nonatomic) IBOutlet UIButton *clearButton;
 @property (nonatomic) IBOutlet UIButton *doneButton;
 @property (nonatomic) IBOutlet UIDatePicker *datePicker;
 
@@ -52,6 +53,7 @@
   
   [self updateDatePicker:options];
   [self updateCancelButton:options];
+  [self updateClearButton:options];
   [self updateDoneButton:options];
   
   UIInterfaceOrientation deviceOrientation = [UIApplication sharedApplication].statusBarOrientation;
@@ -129,6 +131,14 @@
 #pragma mark - Actions
 - (IBAction)doneAction:(id)sender {
   [self jsDateSelected];
+  [self hide];
+}
+
+- (IBAction)clearAction:(id)sender {
+  NSString *jsCallback = [NSString stringWithFormat:@"datePicker._dateSelected(\"%f\");", -1.0];
+    
+  [self.commandDelegate evalJs:jsCallback];
+  
   [self hide];
 }
   
@@ -282,6 +292,22 @@
   NSString *tintColorHex = [options objectForKey:@"cancelButtonColor"];
   self.cancelButton.tintColor = [self colorFromHexString: tintColorHex];
   
+}
+
+- (void)updateClearButton:(NSMutableDictionary *)options {
+    
+    if ([[options objectForKey:@"clearButton"] intValue] == 0) {
+        self.clearButton.hidden = YES;
+        return;
+    }
+    self.clearButton.hidden = NO;
+    
+    NSString *label = [options objectForKey:@"clearButtonLabel"];
+    [self.clearButton setTitle:label forState:UIControlStateNormal];
+    
+    NSString *tintColorHex = [options objectForKey:@"clearButtonColor"];
+    self.clearButton.tintColor = [self colorFromHexString: tintColorHex];
+    
 }
 
 - (void)updateDoneButton:(NSMutableDictionary *)options {

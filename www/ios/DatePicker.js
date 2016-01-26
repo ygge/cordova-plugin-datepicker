@@ -88,7 +88,9 @@ DatePicker.prototype.show = function(options, cb) {
         doneButtonColor: '#007AFF',
         cancelButtonLabel: 'Cancel',
         cancelButtonColor: '#007AFF',
-        locale: "NL",
+        clearButtonLabel: 'Clear',
+        clearButtonColor: '#007AFF',
+        clearButton: false,
         x: '0',
         y: '0',
         minuteInterval: 1,
@@ -111,7 +113,10 @@ DatePicker.prototype.show = function(options, cb) {
 };
 
 DatePicker.prototype._dateSelected = function(date) {
-    var d = new Date(parseFloat(date) * 1000);
+    var d = null;
+    if (date >= 0) {
+        d = new Date(parseFloat(date) * 1000);
+    }
     if (this._callback)
         this._callback(d);
 };
