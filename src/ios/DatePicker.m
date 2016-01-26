@@ -135,7 +135,7 @@
 }
 
 - (IBAction)clearAction:(id)sender {
-  NSString *jsCallback = [NSString stringWithFormat:@"datePicker._dateSelected(\"%f\");", -1.0];
+  NSString *jsCallback = "datePicker._dateSelected(null);";
     
   [self.commandDelegate evalJs:jsCallback];
   
